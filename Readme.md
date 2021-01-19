@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Наталья Грибкова](https://up.htmlacademy.ru/htmlcss/30/user/144655).
-* Наставник: `Неизвестно`.
+* Наставник: [Лиза Пак](https://htmlacademy.ru/profile/lizzy).
 
 ---
 
