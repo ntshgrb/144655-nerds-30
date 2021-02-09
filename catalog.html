@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
@@ -10,38 +10,46 @@
     <link rel="apple-touch-icon" href="img/icons/180.png">
     <link rel="manifest" href="manifest.webmanifest">
   </head>
-  <body>
-    <header>
-      <nav>
-        <a href="index.html">
-          <img src="img/nerds-logo.png" width="160" height="66" alt="логитип студии Нёрдс">
-        </a>
-        <ul>
-          <li><a href="#">Студия</a></li>
-          <li><a href="#">Клиенты</a></li>
-          <li><a href="catalog.html">Магазин</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-        <div>
-          <a href="#"><img src="img/cart-icon.svg" width="15" height="15" alt="Корзина">Корзина</a>
+
+  <body class="page-body inner-page">
+    <header class="main-header top-wrapper">
+      <nav class="main-navigation">
+        <div class="top-wrapper">
+          <a class="main-header-logo" href="index.html">
+            <img src="img/nerds-logo.svg" width="160" height="66" alt="Вернуться на главную">
+          </a>
+          <ul class="site-navigation">
+            <li><a href="#">Студия</a></li>
+            <li><a href="#">Клиенты</a></li>
+            <li><a href="catalog.html">Магазин</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+          <div class="cart">
+            <img src="img/cart-icon.svg" width="15" height="15" alt="Корзина">
+            <a class="cart-link" href="#">Корзина</a>
+          </div>
         </div>
       </nav>
     </header>
-    <main>
-      <h1>Магазин готовых шаблонов</h1>
-      <section>
+
+    <main class="page-catalog container">
+      <div class="top-wrapper">
+        <h1 class="page-title">Магазин готовых шаблонов</h1>
+      </div>
+
+      <section class="filters">
         <h2>Фильтр шаблонов</h2>
-        <form method="get" action="https://echo.htmlacademy.ru">
-          <fieldset>
-            <legend>Стоимость:</legend>
+        <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+          <fieldset class="fieldset-price">
+            <legend class="filter-name">Стоимость:</legend>
             <label for="filter-for-from">От</label>
-            <input type="number" name="from" id="filter-for-from" placeholder="0">
+            <input class="input-price" type="number" name="from" id="filter-for-from" placeholder="0">
             <label for="filter-for-up">До</label>
-            <input type="number" name="up" id="filter-for-up" placeholder="15000">
+            <input class="input-price" type="number" name="up" id="filter-for-up" placeholder="15000">
           </fieldset>
           <fieldset>
-            <legend>Сетка</legend>
-            <ul>
+            <legend class="filter-name">Сетка</legend>
+            <ul class="filter-list">
               <li>
                 <input type="radio" name="grid" value="adaptive" id="filter-for-adaptive" checked>
                 <label for="filter-for-adaptive">Адаптивная</label>
@@ -57,8 +65,8 @@
             </ul>
           </fieldset>
           <fieldset>
-            <legend>Особенности</legend>
-            <ul>
+            <legend class="filter-name">Особенности</legend>
+            <ul class="filter-list">
               <li>
                 <input type="checkbox" name="slider" id="filter-for-slider" checked>
                 <label for="filter-for-slider">Слайдер</label>
@@ -81,13 +89,14 @@
               </li>
             </ul>
           </fieldset>
-          <button type="submit">Показать</button>
+          <button class="button filter-button" type="submit">Показать</button>
         </form>
       </section>
-      <section>
+
+      <section class="filters-templates">
         <h2>Список шаблонов</h2>
-        <p>Сортировать:</p>
-          <ul>
+        <p class="filter-name">Сортировать:</p>
+          <ul class="filter-by">
             <li>
               <a href="#">По цене</a>
             </li>
@@ -108,8 +117,9 @@
               </a>
             </li>
           </ul>
-        <ul>
+        <ul class="template-list">
           <li>
+            <div class="template-top"></div>
             <a href="#">
               <img src="img/catalog-sedona.jpg" width="358" height="578" alt="Седона">
             </a>
@@ -140,49 +150,53 @@
             </a>
           </li>
         </ul>
-        <ul>
-          <li>
+        <ul class="pagination-list">
+          <li class="pagination-item">
             <a>1</a>
           </li>
-          <li>
+          <li class="pagination-item">
             <a href="#">2</a>
           </li>
-          <li>
+          <li class="pagination-item">
             <a href="3">3</a>
           </li>
-          <li>
+          <li class="pagination-item">
             <a href="#">Следующая</a>
           </li>
         </ul>
       </section>
     </main>
-    <footer>
-      <section>
-        <h2>Как нас найти</h2>
-        <img src="img/map-point.svg" width="1440" height="416" alt="карта с маркером">
-        <div>
-          <p>NЁRDS DESIGN STUDIO</p>
-          <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-          <p>тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a></p>
-          <a href="#">Напишите нам</a>
-        </div>
-      </section>
-      <section>
-        <h2>Социальные сети</h2>
-        <ul>
-          <li>
-            <a href="#"><img src="img/icon-vk.svg" width="81" height="81" alt="Вконтакте"></a>
-          </li>
-          <li>
-            <a href="#"><img src="img/icon-fb.svg" width="81" height="81" alt="Фейсбук"></a>
-          </li>
-          <li>
-            <a href="#"><img src="img/icon-instagram.svg" width="81" height="81" alt="Инстаграм"></a>
-          </li>
-        </ul>
-      </section>
-      <p>Давайте дружить, это выгодно!</p>
-      <p>Скидка 10% для друзей из социальных сетей.</p>
+
+    <footer class="main-footer">
+      <div class="container">
+        <section class="contacts">
+          <h2>Как нас найти</h2>
+          <img src="img/map-point.svg" width="1440" height="416" alt="карта с маркером">
+          <div>
+            <p class="studio-name">NЁRDS DESIGN STUDIO</p>
+            <p class="studio-adress">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+            <p>тел. <a class="contacts-phone" href="tel:+78122757575">+7 (812) 275-75-75</a></p>
+            <a class="button" href="#">Напишите нам</a>
+          </div>
+        </section>
+
+        <section class="footer-social">
+          <h2>Социальные сети</h2>
+          <ul class="social-list">
+            <li>
+              <a class="social-button" href="#"><img src="img/icon-vk.svg" width="81" height="81" alt="Вконтакте"></a>
+            </li>
+            <li>
+              <a class="social-button" href="#"><img src="img/icon-fb.svg" width="81" height="81" alt="Фейсбук"></a>
+            </li>
+            <li>
+              <a class="social-button" href="#"><img src="img/icon-instagram.svg" width="81" height="81" alt="Инстаграм"></a>
+            </li>
+          </ul>
+        </section>
+        <p class="discount-text">Давайте дружить, это выгодно!</p>
+        <p class="footer-discount">Скидка 10% для друзей из социальных сетей.</p>
+      </div>
     </footer>
   </body>
 </html>

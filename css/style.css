@@ -26,9 +26,16 @@
 :root {
 
 /*Colors*/
+  --white: #FFFFFF;
+  --grey-lighten:#EEEEEE;
+  --grey-light: #DFDFDF;
+  --grey: #D5D5D5;
   --grey-dark: #666666;
   --grey-darken: #444444;
+  --dimgrey: #4D4D4D;
+  --dimgrey-opacity: rgba(77, 77, 77, 0.12);
   --black-opacity: rgba(0, 0, 0, 0.3);
+  --black-opacity-dark: rgba(0, 0, 0, 0.6);
   --white-opacity: rgba(255, 255, 255, 0.3);
 
   --red: #FB565A;
@@ -46,20 +53,24 @@
   --text-dark: #000000;
   --link-hover: var(--red);
   --link-active: var(--black-opacity);
-  --background-color: #FFFFFF;
-  --wrapper-color: #EEEEEE;
+  --background-color: var(--white);
+  --wrapper-color: var(--grey-lighten);
 
   /*Button*/
-  --button-text: #FFFFFF;
+  --button-text: var(--white);
   --button-text-active:var(--white-opacity);
-  --button-text-active: rgba(255, 255, 255, 0.3);
+  --button-text-active: var(--black-opacity);
   --background-button: var(--red);
   --background-button-hover:var(--red--dark);
   --background-button-active:var(--red--darken);
+  --catalog-button:var(--grey-lighten);
+  --catalog-button-hover:var(--grey-light);
+  --catalog-button-active:var(--grey);
+  --catalog-button-text:var(--black-opacity);
 }
 
 .page-body {
-  min-width: 1440px;
+  min-width: 1160px;
   margin: 0 0;
   padding: 0 0;
   font-family: "Roboto", Arial, sans-serif;
@@ -242,4 +253,100 @@ a {
 .footer-discount {
   line-height: 22px;
   color: var(--grey-darken);
+}
+
+
+/*Inner page*/
+.page-title {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.filter ul{
+  list-style: none;
+}
+
+.filter {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight:400;
+}
+
+.filter-name {
+  text-transform: uppercase;
+  color: var(--text-dark);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.fieldset-price {
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.input-price::placeholder {
+  color: var(--text-basic);
+}
+
+.filter-list {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.filter-button {
+  background-color: var(--catalog-button);
+  color: var(--text-dark);
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+}
+.filter-button:hover {
+  background-color: var(--catalog-button-hover);
+}
+.filter-button:active {
+  background-color: var(--catalog-button-hover);
+  color: var(--catalog-button-text);
+}
+
+.filter-by {
+  list-style: none;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.filter-by a {
+  color: var(--black-opacity);
+}
+.filter-by a:hover {
+  color: var(--black-opacity-dark);
+}
+.filter-by a:active {
+  color: var(--text-dark);
+}
+
+.template-list {
+  list-style: none;
+}
+
+.pagination-list {
+list-style: none;
+}
+
+.pagination-item a{
+  color: var(--text-dark);
+  line-height: 18px;
+  font-weight: 500;
+  background-color: var(--grey-lighten);
+}
+.pagination-item a:hover {
+  background-color:var(--grey-light);
+}
+.pagination-item a:active {
+  background-color: var(--grey);
+  color: var(--black-opacity);
 }
