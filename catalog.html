@@ -10,24 +10,22 @@
     <link rel="apple-touch-icon" href="img/icons/180.png">
     <link rel="manifest" href="manifest.webmanifest">
   </head>
-
   <body class="page-body inner-page">
+
     <header class="main-header top-wrapper">
-      <nav class="main-navigation">
-        <div class="top-wrapper">
-          <a class="main-header-logo" href="index.html">
-            <img src="img/nerds-logo.svg" width="160" height="66" alt="Вернуться на главную">
-          </a>
-          <ul class="site-navigation">
-            <li><a href="#">Студия</a></li>
-            <li><a href="#">Клиенты</a></li>
-            <li><a href="catalog.html">Магазин</a></li>
-            <li><a href="#">Контакты</a></li>
-          </ul>
-          <div class="cart">
-            <img src="img/cart-icon.svg" width="15" height="15" alt="Корзина">
-            <a class="cart-link" href="#">Корзина</a>
-          </div>
+      <nav class="main-navigation container">
+        <a class="main-header-logo" href="index.html">
+          <img src="img/nerds-logo.svg" width="160" height="66" alt="Вернуться на главную">
+        </a>
+        <ul class="site-navigation">
+          <li><a href="#">Студия</a></li>
+          <li><a href="#">Клиенты</a></li>
+          <li><a href="catalog.html">Магазин</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+        <div class="cart">
+          <img src="img/cart-icon.svg" width="15" height="15" alt="Корзина">
+          <a class="cart-link" href="#">Корзина</a>
         </div>
       </nav>
     </header>
@@ -36,8 +34,9 @@
       <div class="top-wrapper">
         <h1 class="page-title container">Магазин готовых шаблонов</h1>
       </div>
+
       <div class="container catalog-container">
-        <section class="filters">
+        <section class="catalog-filters">
           <h2>Фильтр шаблонов</h2>
           <form class="filter" method="get" action="https://echo.htmlacademy.ru">
             <fieldset class="fieldset-price">
@@ -92,61 +91,61 @@
             <button class="button filter-button" type="submit">Показать</button>
           </form>
         </section>
-
-        <section class="filters-templates">
           <!--<h2>Список шаблонов</h2>-->
-          <p class="filter-name">Сортировать:</p>
-          <ul class="filter-by">
-            <li>
-              <a href="#">По цене</a>
-            </li>
-            <li>
-              <a href="#">По типу</a>
-            </li>
-            <li>
-              <a href="#">По названию</a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="img/filter-down.svg" width="11" height="10" alt="фильт по уменьшению">
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="img/filter-up.svg" width="11" height="10" alt="фильт по возрастанию">
-              </a>
-            </li>
-          </ul>
+        <section class="catalog-templates">
+
+          <div class="catalog-filter-by">
+            <p class="filter-name">Сортировать:</p>
+            <ul class="filter-by">
+              <li>
+                <a href="#">По цене</a>
+              </li>
+              <li>
+                <a href="#">По типу</a>
+              </li>
+              <li>
+                <a href="#">По названию</a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/filter-down.svg" width="11" height="10" alt="фильт по уменьшению">
+                </a>
+                <a href="#">
+                  <img src="img/filter-up.svg" width="11" height="10" alt="фильт по возрастанию">
+                </a>
+              </li>
+            </ul>
+          </div>
+
           <ul class="template-list">
-            <li>
-              <div class="template-top"></div>
+            <li class="template-item">
               <a href="#">
-                <img src="img/catalog-sedona.jpg" width="358" height="578" alt="Седона">
+                <img class="template-item-image" src="img/catalog-sedona.jpg" width="358" height="578" alt="Седона">
               </a>
             </li>
-            <li>
+            <li class="template-item">
               <a href="#">
-                <img src="img/catalog-pink.jpg" width="358" height="578" alt="Пинк">
+                <img class="template-item-image" src="img/catalog-pink.jpg" width="358" height="578" alt="Пинк">
               </a>
             </li>
-            <li>
+            <li class="template-item">
               <a href="#">
-                <img src="img/catalog-barbershop.jpg" width="358" height="578" alt="Бородинский">
+                <img class="template-item-image" src="img/catalog-barbershop.jpg" width="358" height="578" alt="Бородинский">
               </a>
             </li>
-            <li>
+            <li class="template-item">
               <a href="#">
-                <img src="img/catalog-mishka.jpg" width="358" height="578" alt="Мишка">
+                <img class="template-item-image" src="img/catalog-mishka.jpg" width="358" height="578" alt="Мишка">
               </a>
             </li>
-            <li>
+            <li class="template-item">
               <a href="#">
-                <img src="img/catalog-aplus.jpg" width="358" height="578" alt="Учебная платформа">
+                <img class="template-item-image" src="img/catalog-aplus.jpg" width="358" height="578" alt="Учебная платформа">
               </a>
             </li>
-            <li>
+            <li class="template-item">
               <a href="#">
-                <img src="img/catalog-kvast.jpg" width="358" height="578" alt="Крафтовый квас">
+                <img class="template-item-image" src="img/catalog-kvast.jpg" width="358" height="578" alt="Крафтовый квас">
               </a>
             </li>
           </ul>
@@ -169,10 +168,12 @@
     </main>
 
     <footer class="main-footer">
+      <div class="adress-map">
+        <img src="img/map-point.svg" width="1440" height="416" alt="карта с маркером">
+      </div>
       <div class="container">
         <section class="contacts">
           <h2>Как нас найти</h2>
-          <img src="img/map-point.svg" width="1440" height="416" alt="карта с маркером">
           <div>
             <p class="studio-name">NЁRDS DESIGN STUDIO</p>
             <p class="studio-adress">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
@@ -180,9 +181,8 @@
             <a class="button" href="#">Напишите нам</a>
           </div>
         </section>
-
+        <!--<h2>Социальные сети</h2>-->
         <section class="footer-social">
-          <h2>Социальные сети</h2>
           <ul class="social-list">
             <li>
               <a class="social-button" href="#"><img src="img/icon-vk.svg" width="81" height="81" alt="Вконтакте"></a>
@@ -194,9 +194,11 @@
               <a class="social-button" href="#"><img src="img/icon-instagram.svg" width="81" height="81" alt="Инстаграм"></a>
             </li>
           </ul>
+          <div class="footer-promo">
+            <p class="discount-text">Давайте дружить, это выгодно!</p>
+            <p class="footer-discount">Скидка 10% для друзей из социальных сетей.</p>
+          </div>
         </section>
-        <p class="discount-text">Давайте дружить, это выгодно!</p>
-        <p class="footer-discount">Скидка 10% для друзей из социальных сетей.</p>
       </div>
     </footer>
   </body>
