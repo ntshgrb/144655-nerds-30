@@ -24,7 +24,6 @@
           <li><a href="#">Контакты</a></li>
         </ul>
         <div class="cart">
-          <!--<img src="img/cart-icon.svg" width="15" height="15" alt="Корзина">-->
           <a class="cart-link" href="#">Корзина</a>
         </div>
       </nav>
@@ -48,17 +47,17 @@
                     <div class="bar" style="
                       width: 70%; margin-left: 0"></div>
                   </div>
-                  <div class="toggle toggle-min" tabindex="0" style="
-              left: 5%"></div>
-                  <div class="toggle toggle-max" tabindex="0" style="
-              left: 65%"></div>
+                  <button class="toggle toggle-min" tabindex="0" style="
+              left: 5%"></button>
+                  <button class="toggle toggle-max" tabindex="0" style="
+              left: 65%"></button>
                 </div>
 
                 <div class="price-controls">
                   <label class="min-price" for="filter-for-from">От</label>
-                  <input class="input-price" type="text" name="from" id="filter-for-from" placeholder="0">
+                  <input class="input-price" type="number" name="from" id="filter-for-from" placeholder="0">
                   <label class="max-price" for="filter-for-up">До</label>
-                  <input class="input-price" type="text" name="up" id="filter-for-up" placeholder="15 000">
+                  <input class="input-price" type="number" name="up" id="filter-for-up" placeholder="15 000">
                 </div>
 
               </div>
@@ -94,7 +93,7 @@
                   <label for="filter-for-advantages">Блок преимуществ</label>
                 </li>
                 <li class="checkbox-option">
-                  <input class="filter-checkbox visually-hidden" type="checkbox" name="news" id="filter-for-news" checked>
+                  <input class="filter-checkbox visually-hidden"  type="checkbox" name="news" id="filter-for-news" checked>
                   <label for="filter-for-news">Новости</label>
                 </li>
                 <li class="checkbox-option">
@@ -128,11 +127,9 @@
               <li>
                 <a class="filter-pointer pointer-active" href="#">
                   <svg width="11" height="10" viewBox="0 0 11 10"><path d="M5.5 10L0 0H11" fill="#A6A6A6"/></svg>
-                  <!--<img src="img/filter-down.svg" width="11" height="10" alt="фильт по уменьшению">-->
                 </a>
                 <a class="filter-pointer" href="#">
                   <svg width="11" height="10" viewBox="0 0 11 10"><path d="M5.5 0L0 10H11L5.5 0Z" fill="#A6A6A6"/></svg>
-                  <!--<img src="img/filter-up.svg" width="11" height="10" alt="фильт по возрастанию">-->
                 </a>
               </li>
             </ul>
