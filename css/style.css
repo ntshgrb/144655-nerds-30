@@ -340,8 +340,8 @@ a {
 }
 
 .product-website, .product-app, .product-presentation {
-  display: inline-block;
-  margin-top: 16px;
+  display: block;
+  margin-top: 32px;
   padding-top: 17px;
   padding-bottom: 15px;
   width: 160px;
@@ -379,7 +379,7 @@ a {
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 16px;
-  margin-top: 19px;
+  margin-top: 18px;
 }
 
 .product-list {
@@ -399,7 +399,7 @@ a {
 
 /*Studio description*/
 .studio-description {
-  padding-top: 39px;
+  padding-top: 38px;
   padding-bottom: 47px;
   display: grid;
   grid-template-columns: 660px 360px;
@@ -412,7 +412,7 @@ a {
   line-height: 45px;
   font-weight: 500;
   margin-top: 34px;
-  margin-bottom: 32px;
+  margin-bottom: 35px;
 }
 
 .orders-types {
@@ -449,7 +449,7 @@ a {
   font-weight: 700;
   color: var(--text-dark);
   margin-top: 30px;
-  margin-bottom: 31px;
+  margin-bottom: 30px;
   text-align: center;
 }
 
@@ -481,7 +481,7 @@ a {
 
 .descriptin-text {
   line-height: 18px;
-  margin-top: 10px;
+  margin-top: 13px;
 }
 
 /*Partners*/
@@ -490,9 +490,9 @@ a {
   margin: 0;
   margin-bottom: 80px;
   padding: 0;
-  padding-top: 52px;
+  padding-top: 45px;
   border-top: 2px solid var(--grey-lighten);
-  padding-bottom: 32px;
+  padding-bottom: 37px;
   border-bottom: 2px solid var(--grey-lighten);
   display: flex;
   flex-wrap: wrap;
@@ -533,8 +533,19 @@ a {
 }
 
 .adress-map img {
+  position: absolute;
   display: block;
   margin: 0 auto;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.adress-map iframe {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .adress-map .container {
@@ -571,11 +582,11 @@ a {
 }
 
 .contacts-button {
-  display: inline-block;
+  display: block;
   width: 219px;
   padding: 16px 0;
-  margin-bottom: 47px;
-  margin-top: 18px;
+  margin-bottom: 46px;
+  margin-top: 33px;
   }
 
 .social-list {
@@ -621,7 +632,7 @@ a {
 }
 
 .footer-promo {
-  padding-top: 14px;
+  padding-top: 13px;
 }
 
 .discount-text {
@@ -652,6 +663,10 @@ a {
   margin: auto;
   top: 16%;
   z-index: 20;
+}
+
+.modal-display-none {
+  display: none;
 }
 
 .modal-heading {
@@ -1137,7 +1152,7 @@ a {
   padding-top: 26px;
   padding-bottom: 44px;
   box-sizing: border-box;
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
@@ -1146,6 +1161,10 @@ a {
   position: absolute;
   z-index: 10;
   bottom: 0;
+}
+
+.template-item:hover .template-modal {
+  display: flex;
 }
 
 .template-modal-heading {
