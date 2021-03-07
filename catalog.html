@@ -15,12 +15,12 @@
     <header class="main-header top-wrapper">
       <nav class="main-navigation container">
         <a class="main-header-logo" href="index.html">
-          <img src="img/nerds-logo.svg" width="160" height="66" alt="Вернуться на главную">
+          <img class="header-img" src="img/nerds-logo.svg" width="160" height="66" alt="Вернуться на главную">
         </a>
         <ul class="site-navigation">
           <li><a href="#">Студия</a></li>
           <li><a href="#">Клиенты</a></li>
-          <li><a class="disabled">Магазин</a></li>
+          <li><a class="link-disabled">Магазин</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
         <div class="cart">
@@ -39,7 +39,6 @@
           <h2 class="visually-hidden">Фильтр шаблонов</h2>
           <form class="filter" method="get" action="https://echo.htmlacademy.ru">
             <fieldset class="fieldset-item fieldset-price">
-
               <legend class="filter-name filter-name-price">Стоимость:</legend>
               <div class="range-filter">
                 <div class="range-controls">
@@ -48,24 +47,21 @@
                       width: 70%; margin-left: 0"></div>
                   </div>
                   <button class="toggle toggle-min" tabindex="0" style="
-              left: 5%"></button>
+              left: 7%"></button>
                   <button class="toggle toggle-max" tabindex="0" style="
-              left: 65%"></button>
+              left: 62%"></button>
                 </div>
-
                 <div class="price-controls">
                   <label class="min-price" for="filter-for-from">От</label>
                   <input class="input-price" type="number" name="from" id="filter-for-from" placeholder="0">
                   <label class="max-price" for="filter-for-up">До</label>
                   <input class="input-price" type="number" name="up" id="filter-for-up" placeholder="15 000">
                 </div>
-
               </div>
-
             </fieldset>
 
             <fieldset class="fieldset-item">
-              <legend class="filter-name">Сетка</legend>
+              <legend class="filter-name filter-name-grid">Сетка:</legend>
               <ul class="filter-list">
                 <li class="radio-option">
                   <input class="filter-radio visually-hidden" type="radio" name="grid" value="adaptive" id="filter-for-adaptive" checked>
@@ -82,7 +78,7 @@
               </ul>
             </fieldset>
             <fieldset class="fieldset-item">
-              <legend class="filter-name">Особенности</legend>
+              <legend class="filter-name filter-name-feature">Особенности:</legend>
               <ul class="filter-list">
                 <li class="checkbox-option">
                   <input class="filter-checkbox visually-hidden" type="checkbox" name="slider" id="filter-for-slider" checked>
@@ -138,33 +134,63 @@
           <ul class="template-list">
             <li class="template-item">
               <a href="#">
-                <img class="template-item-image" src="img/catalog-sedona.jpg" width="358" height="578" alt="Седона">
+                <img class="template-item-image" src="img/catalog-sedona.jpg" width="358" height="578" alt="Макет проекта Седона">
               </a>
+              <div class="template-modal">
+                <a class="template-modal-heading" href="#">Sedona</a>
+                <p class="template-modal-text">Информационный сайт для&nbsp;туристов</p>
+                <button class="button template-modal-button">9 900 <span>&#8381;</span></button>
+              </div>
             </li>
             <li class="template-item">
               <a href="#">
-                <img class="template-item-image" src="img/catalog-pink.jpg" width="358" height="578" alt="Пинк">
+                <img class="template-item-image" src="img/catalog-pink.jpg" width="358" height="578" alt="Макет проекта Пинк">
               </a>
+              <div class="template-modal">
+                <a class="template-modal-heading" href="#">Pink app</a>
+                <p class="template-modal-text">Продуктовый лендинг приложения для iOS и Android</p>
+                <button class="button template-modal-button">9 900 <span>&#8381;</span></button>
+              </div>
             </li>
             <li class="template-item">
               <a href="#">
-                <img class="template-item-image" src="img/catalog-barbershop.jpg" width="358" height="578" alt="Бородинский">
+                <img class="template-item-image" src="img/catalog-barbershop.jpg" width="358" height="578" alt="Макет проекта Бородинский">
               </a>
+              <div class="template-modal">
+                <a class="template-modal-heading" href="#">Barbershop</a>
+                <p class="template-modal-text">Сайт салона красоты. Для&nbsp;мужчин, да.</p>
+                <button class="button template-modal-button">9 900 <span>&#8381;</span></button>
+              </div>
             </li>
             <li class="template-item">
               <a href="#">
-                <img class="template-item-image" src="img/catalog-mishka.jpg" width="358" height="578" alt="Мишка">
+                <img class="template-item-image" src="img/catalog-mishka.jpg" width="358" height="578" alt="Макет проекта Мишка">
               </a>
+              <div class="template-modal">
+                <a class="template-modal-heading" href="#">Mishka</a>
+                <p class="template-modal-text">Интернет-магазин вязаных&nbsp;игрушек</p>
+                <button class="button template-modal-button">9 900 <span>&#8381;</span></button>
+              </div>
             </li>
             <li class="template-item">
               <a href="#">
-                <img class="template-item-image" src="img/catalog-aplus.jpg" width="358" height="578" alt="Учебная платформа">
+                <img class="template-item-image" src="img/catalog-aplus.jpg" width="358" height="578" alt="Макет проекта А плюс">
               </a>
+              <div class="template-modal">
+                <a class="template-modal-heading" href="#">A plus</a>
+                <p class="template-modal-text">Лендинг курсов повышения квалификации</p>
+                <button class="button template-modal-button">9 900 <span>&#8381;</span></button>
+              </div>
             </li>
             <li class="template-item">
               <a href="#">
-                <img class="template-item-image" src="img/catalog-kvast.jpg" width="358" height="578" alt="Крафтовый квас">
+                <img class="template-item-image" src="img/catalog-kvast.jpg" width="358" height="578" alt="Макет проекта Кваст">
               </a>
+              <div class="template-modal">
+                <a class="template-modal-heading" href="#">Кваст</a>
+                <p class="template-modal-text">Промо-сайт производителя крафтового кваса</p>
+                <button class="button template-modal-button">9 900 <span>&#8381;</span></button>
+              </div>
             </li>
           </ul>
           <ul class="pagination-list">
@@ -186,7 +212,7 @@
     </main>
     <footer class="main-footer">
       <div class="adress-map">
-        <img src="img/map-point.svg" width="1440" height="416" alt="расположение студии на карте" />
+        <img src="img/map-point.svg" width="1440" height="416" alt="студия находится по адресу Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" />
         <div class="container">
           <section class="contacts">
             <h2 class="visually-hidden">Как нас найти</h2>
@@ -225,5 +251,25 @@
           </div>
         </section>
     </footer>
+
+    <section class="modal feedback visually-hidden">
+      <h3 class="modal-heading">Напишите нам</h3>
+      <form class="feedback-form" method="post" action="https://echo.htmlacademy.ru">
+        <p class="modal-item">
+          <label class="modal-captions" for="feedback-name">Ваше имя:</label>
+          <input class="modal-name" type="text" name="user-name" id="feedback-name" placeholder="Имя Фамилия"/>
+        </p>
+        <p class="modal-item">
+          <label class="modal-captions" for="feedback-email">Ваш email:</label>
+          <input class="modal-email" type="email" name="user-email" id="feedback-email" placeholder="email@example.com "/>
+        </p>
+        <p class="modal-item-textarea">
+          <label class="modal-captions" for="feedback-text">Текст письма:</label>
+          <textarea class="modal-text" name="user-text" id="feedback-text" rows="5" placeholder="В свободной форме"></textarea>
+        </p>
+        <button class="button modal-button" type="submit">Отправить</button>
+      </form>
+      <button class="modal-close" type="button" aria-label="Закрыть окно"></button>
+    </section>
   </body>
 </html>
