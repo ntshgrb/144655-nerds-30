@@ -7,10 +7,11 @@ const text = popup.querySelector('[name=user-text]');
 const form = popup.querySelector('.feedback-form');
 const storage_name = localStorage.getItem('name');
 const storage_email = localStorage.getItem('email');
+
 link.addEventListener('click', function(evt) {
-evt.preventDefault();
-popup.classList.remove('modal-display-none');
-name.focus();
+  evt.preventDefault();
+  popup.classList.remove('modal-display-none');
+  name.focus();
 if (storage_name){
   name.value = storage_name;
 }
@@ -18,14 +19,18 @@ if (storage_email){
   email.value = storage_email;
 }
 });
+
 close.addEventListener('click', function(evt) {
   evt.preventDefault();
-  popup.classList.add('modal-display-none')
+  popup.classList.add('modal-display-none');
+  popup.classList.remove("modal-error");
 }
 );
+
 form.addEventListener('submit', function(evt) {
   if (!name.value || !email.value || !text.value) {
   evt.preventDefault();
+  popup.classList.add("modal-error");
   console.log('нужно заполнить все поля');
 }
   else {
@@ -34,4 +39,14 @@ form.addEventListener('submit', function(evt) {
     localStorage.setItem('email', email.value);
   }
 }
+});
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    if (!popup.classList.contains("modal-display-none")) {
+      evt.preventDefault();
+      popup.classList.add("modal-display-none");
+      popup.classList.remove("modal-error");
+    }
+  }
 });
