@@ -7,6 +7,7 @@
   font-weight: 400;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/robotobold.woff2") format("woff2"),
@@ -14,6 +15,7 @@
   font-weight: 700;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/robotomedium.woff2") format("woff2"),
@@ -46,6 +48,7 @@
   --black-opacity-lighten: rgba(40, 49, 54, 0.3);
   --black-opacity-light: rgba(0, 0, 0, 0.25);
   --black-opacity: rgba(0, 0, 0, 0.3);
+  --black-opacity-lighter: rgba(0, 0, 0, 0.4);
   --black-opacity-dark: rgba(0, 0, 0, 0.6);
   --white-opacity: rgba(255, 255, 255, 0.3);
   --white-smoke: rgba(68, 68, 68, 0.5);
@@ -92,7 +95,7 @@
 }
 
 .page-body {
-  min-width: 1160px;
+  min-width: 1200px;
   margin: 0 0;
   padding: 0 0;
   font-family: "Roboto", Arial, sans-serif;
@@ -135,6 +138,7 @@ a {
 /*Container*/
 .container {
   width: 1160px;
+  padding: 0 20px;
   margin: 0 auto;
 }
 
@@ -158,6 +162,11 @@ a {
   justify-content: space-between;
   min-width: 438px;
   padding-top: 20px;
+  max-width: 800px;
+}
+
+.site-navigation li:not(:last-child) {
+  padding-right: 5px;
 }
 
 .header-img {
@@ -249,9 +258,11 @@ a {
 .feature-item:first-child {
   background-image: url(../img/nerds-index-slide1.png);
 }
+
 .feature-item:nth-child(2) {
   background-image: url(../img/nerds-index-slide2.png);
 }
+
 .feature-item:nth-child(3) {
   background-image: url(../img/nerds-index-slide3.png);
 }
@@ -260,7 +271,7 @@ a {
   list-style: none;
   margin: 0;
   padding: 0;
-  }
+}
 
 .feature-button{
   display: block;
@@ -317,8 +328,8 @@ a {
   box-shadow:
   inset 0 0 0 5px  var(--white),
   inset 0 0 0 7px  var(--mysterious-grey);
-
 }
+
 .feature-item:not(.features-current) {
   display: none;
 }
@@ -339,6 +350,7 @@ a {
 .button:hover {
   background-color: var(--background-button-hover);
 }
+
 .button:active {
   background-color: var(--background-button-active);
   color:var(--button-text-active);
@@ -360,18 +372,23 @@ a {
 .product-app {
   background-color: var(--green);
 }
+
 .product-app:hover{
   background-color: var(--green--dark);
 }
+
 .product-app:active{
   background-color: var(--green--darken);
 }
+
 .product-presentation {
   background-color: var(--orange);
 }
+
 .product-presentation:hover{
   background-color: var(--orange--dark);
 }
+
 .product-presentation:active {
   background-color: var(--orange--darken);
 }
@@ -404,8 +421,6 @@ a {
 .product-item p {
   margin-right: 40px;
 }
-
-
 
 /*Studio description*/
 .studio-description {
@@ -527,13 +542,15 @@ a {
   transform: translateY(-50%);
   }
 
-  .partners-list a .img-partner{
+.partners-list--link .img-partner{
     opacity: 0.2;
   }
-  .partners-list a:hover .img-partner {
+
+.partners-list--link:hover .img-partner {
     opacity: 1;
   }
-  .partners-list a:active .img-partner {
+
+.partners-list--link:active .img-partner {
     opacity: 0.1;
   }
 
@@ -564,7 +581,7 @@ a {
 
 .contacts {
   top: -362px;
-  left: 0;
+  left: 21px;
   position: absolute;
   background-color: var(--white);
   width: 319px;
@@ -619,6 +636,7 @@ a {
   margin-top: 61px;
   margin-bottom: 80px;
 }
+
 .social-button {
   width: 78px;
   height: 78px;
@@ -633,10 +651,12 @@ a {
 .social-button:hover {
   background: var(--red--dark);
 }
+
 .social-button:active {
   background: var(--red--darken);
   box-shadow: inset 0px 3px 0px var(--grey-opacity);
 }
+
 .social-button:active path {
   fill: var(--white-opacity);
 }
@@ -666,13 +686,14 @@ a {
   width: 960px;
   box-sizing: border-box;
   background-color: var(--white);
-  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 20px 40px var(--black-opacity-lighter);
   position: fixed;
   right: 0;
   left: 0;
   margin: auto;
   top: 16%;
   z-index: 20;
+  animation: bounce 0.6s;
 }
 
 .modal-display-none {
@@ -708,7 +729,7 @@ a {
   box-sizing: border-box;
   border: 2px solid var(--lighten-dimgrey);
   border-radius: 3px;
-  }
+}
 
 .feedback-form {
   display: grid;
@@ -719,7 +740,7 @@ a {
 .modal-item-textarea {
   grid-column: 1 / -1;
   margin-bottom: 39px;
-  }
+}
 
 .modal-text {
   color: var(--grey-darken);
@@ -798,7 +819,6 @@ a {
   opacity: 0.1;
   outline: none;
 }
-
 
 /*Inner page*/
 .container.page-title {
@@ -1028,9 +1048,11 @@ a {
   padding-right: 0;
   margin-top: 34px;
 }
+
 .filter-button:hover {
   background-color: var(--catalog-button-hover);
 }
+
 .filter-button:active {
   background-color: var(--catalog-button-hover);
   color: var(--catalog-button-text);
@@ -1065,6 +1087,10 @@ a {
   justify-content: space-between;
 }
 
+.filter-by li:not(:last-child) {
+  padding-right: 5px;
+}
+
 .filter-by li:last-child {
   width: 41px;
   margin-left: 22px;
@@ -1075,9 +1101,11 @@ a {
 .filter-by a {
   color: var(--black-opacity);
 }
+
 .filter-by a:hover {
   color: var(--black-opacity-dark);
 }
+
 .filter-by a:active, a.filter-by-active {
   color: var(--text-dark);
 }
@@ -1142,11 +1170,6 @@ a {
   box-shadow: 0px 6px 15px var(--black-opacity-light);
 }
 
-
-.template-item a {
-  display: flex;
-}
-
 .template-item:nth-child(2n) {
   margin-right: 0;
 }
@@ -1156,6 +1179,7 @@ a {
   height: 578px;
   border-radius: 0 0 5px 5px;
   object-fit: contain;
+  display: block;
 }
 
 .template-modal {
@@ -1174,15 +1198,16 @@ a {
   position: absolute;
   z-index: 10;
   bottom: 0;
-  display: none;
+  display: flex;
+  opacity: 0;
   }
 
 .template-item:hover .template-modal {
-  display: flex;
+  opacity: 1;
 }
 
-.template-item:focus-within .template-modal {
-  display: flex;
+.template-item:focus-within  .template-modal {
+  opacity: 1;
 }
 
 .template-modal-heading {
@@ -1257,6 +1282,7 @@ align-items: center;
 .pagination-item a:hover {
   background-color:var(--grey-light);
 }
+
 .pagination-item a:active {
   background-color: var(--grey);
   color: var(--black-opacity);
@@ -1284,6 +1310,23 @@ align-items: center;
   margin-right: 0;
 }
 
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
 
 @keyframes shake {
   0%,
