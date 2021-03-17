@@ -680,6 +680,14 @@ a {
   margin-top: 0;
 }
 
+.map-iframe {
+  width: 100%;
+}
+
+.map-image {
+  width: 100%;
+}
+
 /*Modal Feedback*/
 .feedback {
   padding: 63px 100px 84px 100px;
